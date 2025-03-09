@@ -11,7 +11,7 @@ def isThreeOrFive(n):
 def getFactors(num):
   """Returns a list of all factors of a given integer"""
   factors = []
-  for f in range(1, num//2 + 1):
+  for f in range(1, num // 2 + 1):
     if num % f == 0:
       factors.append(f)
 

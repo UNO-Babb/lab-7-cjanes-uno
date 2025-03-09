@@ -1,11 +1,13 @@
 #Problem3.py
-#Project Euler problem 3
+#Name: Colton Janes
+#Date: 03/09/2025
+#Assignment: Lab 7 - Project Euler Problem 3
 
 from NumberTests import isPrime
 from NumberTests import getFactors
 
 def main():
-  number = 600851475143
+  number = 657513
   factors = getFactors(number)
   print(factors)
 
