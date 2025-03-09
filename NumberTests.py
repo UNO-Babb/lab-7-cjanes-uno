@@ -17,6 +17,14 @@ def getFactors(num):
 
   return factors
 
+def isEven(n):
+  """Returns boolean about given value being even."""
+
+  if n % 2 == 0:
+    return True
+  else:
+    return False
+
 def isPrime(p):
   """Returns boolean (True/False) if the value given is prime."""
 
@@ -31,13 +39,27 @@ def isPrime(p):
     
   return True
 
-def isEven(n):
-  """Returns boolean about given value being even."""
+def findNthPrime(n):
+  """Finds the nth prime number."""
+  count = 0 #sets the starting primes found
+  num = 1
 
-  if n % 2 == 0:
-    return True
-  else:
-    return False
+  while count < n: #our nth count of primes
+    num = num + 1
+    if isPrime(num):
+      count = count + 1
+
+  return num #when the count reaches our nth value, return the prime number
+
+def sumPrime(sp):
+  """Finds the summation of all prime numbers in a predermined range."""
+  total = 0 #set total value to zero
+
+  for num in range(2, sp):
+    if isPrime(num):
+      total = total + num
+
+  return total
 
 def addNum(numList, num):
   """Adds the given number to the given list. Does not add duplicate values."""
@@ -61,6 +83,8 @@ def fibonacciSequence(value):
 
 def isPalindrome(num):
   """Returns True if pal is a palindrome."""
+  if num < 10: #figured out that leaving this out could be a problem :'(
+    return False
   orig = num
   rev = 0
 
@@ -106,7 +130,6 @@ def main():
     print("%d is a palindrome" %(num1))
   if isPalindrome(num2):
     print("%d is a palindrome" %(num2))
-
 
 if __name__ == '__main__':
     main()
